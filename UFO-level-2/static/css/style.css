@@ -47,9 +47,9 @@ body {
 .nav-ufo {
   position: absolute;
   bottom: 5px;
-  left: 150px;
+  left: 175px;
   width: 35px;
-  color: white;
+  color: rgb(72, 253, 0);
 }
 
 /* Adding styles to the aside and filter form */

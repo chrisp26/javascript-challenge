@@ -45,11 +45,23 @@ function runEnter() {
   var inputElement = d3.select("#datetime");
   var inputValue = inputElement.property("value");
 
+  var cityInput = d3.select("#idCity");
+  var stateInput = d3.select("#idState");
+  var countryInput = d3.select("#idCountry");
+  var shapeInput = d3.select("#idShape");
+
   // console.log(inputElement);
   console.log(inputValue);
 
-  var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
-  console.log(filteredData)
+  var filteredData = tableData
+  if (inputValue){
+   filteredData = filteredData.filter(x => x.datetime === inputValue);
+  }
+
+  if (cityInput){
+   filteredData = filteredData.filter(x => x.city === cityInput);
+  }
+
   // Clear out the list values
 
   // remove any children from the list to
