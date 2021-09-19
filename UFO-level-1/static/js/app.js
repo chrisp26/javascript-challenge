@@ -33,8 +33,8 @@ data.forEach((ufoSightings) => {
 
 // Event listener for date input field
 var inputField = d3.select("#filters");
-
-inputField.on("change", runEnter);
+var button = d3.select("#filter-btn");
+button.on("click", runEnter);
 
 function runEnter() {
 
